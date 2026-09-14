@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bruce2089.github.io/Bruce-tactical/sitemap.xml
