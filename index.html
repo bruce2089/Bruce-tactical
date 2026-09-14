@@ -128,7 +128,7 @@
   .card .shot img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.05) saturate(1.03)}
   .card .shot .code{position:absolute;left:12px;top:10px;font-size:11px;letter-spacing:.2em;font-weight:800;color:#e9d194;z-index:2;text-shadow:0 1px 6px rgba(0,0,0,.85)}
   .card .body{padding:19px;flex:1;display:flex;flex-direction:column}
-  .card h3{font-size:19px;letter-spacing:.06em}
+  .card h3{font-size:clamp(14px,4.3vw,18px);letter-spacing:.03em;white-space:nowrap}
   .card .cate{color:var(--gold);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px}
   .card ul{list-style:none;padding:0;margin:14px 0 20px;font-size:13.5px;color:var(--muted)}
   .card ul li{padding:7px 0;border-top:1px solid var(--line);display:flex;gap:10px;align-items:baseline}
@@ -233,6 +233,10 @@
   .kw-list{display:flex;flex-wrap:wrap;gap:9px}
   .kw-chip{display:inline-flex;align-items:center;padding:7px 13px;border:1px solid var(--line);color:var(--muted);font-size:12px;letter-spacing:.04em;background:rgba(201,162,75,.05)}
   .kw-chip:hover{border-color:var(--gold);color:var(--gold-l)}
+
+  /* fee lists: 横向单行排列 */
+  .ie ul.fee-row{display:flex;flex-wrap:wrap;gap:6px 22px}
+  .ie ul.fee-row li{border-top:0;padding:3px 0}
 </style>
 </head>
 <body class="lang-zh">
@@ -271,7 +275,6 @@
       <span><b>NRA</b> <span class="zh">认证高级教官</span><span class="en">Certified</span></span>
       <span><b>10+</b> <span class="zh">年经验</span><span class="en">Years</span></span>
       <span><b>6+</b> <span class="zh">种枪械</span><span class="en">Platforms</span></span>
-      <span><b>MB ML550</b> <span class="zh">接送可选</span><span class="en">Pickup</span></span>
     </div>
   </div>
 </div>
@@ -298,7 +301,7 @@
 
 <section id="guns">
   <div class="wrap">
-    <div class="sec-kick"><span class="zh">体验课程装备</span><span class="en">WHAT'S INCLUDED</span></div>
+    <div class="sec-kick"><span class="zh">经典体验课程装备</span><span class="en">WHAT'S INCLUDED</span></div>
     <h2 class="sec-title"><span class="zh">一次课程 · 六把枪全体验</span><span class="en">One Course · Six Firearms</span></h2>
     <div class="divider"><span></span></div>
     <p class="sec-sub"><span class="zh">「射击体验套餐」包含：手枪 2 把 · 步枪 2 把 · 精准射击步枪 1 把 · 霰弹枪 1 把（弹药按每支枪配发）。</span><span class="en">The Experience Package includes: 2 handguns · 2 rifles · 1 precision rifle · 1 shotgun (ammo per firearm).</span></p>
@@ -363,7 +366,7 @@
         </div>
       </div>
     </div>
-    <p style="text-align:center;color:var(--muted);font-size:14px;margin:26px 0 0"><span class="zh">以上全部枪械均包含在「射击体验套餐」内 —— 单人 $380 / 双人 $330 / 小组 $280（每人，详见课程费用）</span><span class="en">All firearms above are included in the Experience Package — $380 (solo) / $330 (two) / $280 (group) per person (see pricing).</span></p>
+    <p style="text-align:center;color:var(--muted);font-size:14px;margin:26px 0 0"><span class="zh">以上全部枪械均包含在「射击体验套餐」内 —— 单人 $380 / 双人 $330 / 小组 $300（每人，详见课程费用）</span><span class="en">All firearms above are included in the Experience Package — $380 (solo) / $330 (two) / $300 (group) per person (see pricing).</span></p>
   </div>
 </section>
 
@@ -377,20 +380,20 @@
         <h3><span class="zh">射击体验套餐（含全部枪械）</span><span class="en">Experience Package (All Firearms)</span></h3>
         <div class="tier"><span class="who"><b><span class="zh">单人训练（1 对 1）</span><span class="en">Private (1-on-1)</span></b><span><span class="zh">专属一对一指导</span><span class="en">Dedicated 1-on-1 coaching</span></span></span><span class="amt">$380<small>/<span class="zh">人</span><span class="en">pp</span></small></span></div>
         <div class="tier"><span class="who"><b><span class="zh">双人配合</span><span class="en">Two-Person</span></b><span><span class="zh">两人成行，更划算</span><span class="en">Better value for two</span></span></span><span class="amt">$330<small>/<span class="zh">人</span><span class="en">pp</span></small></span></div>
-        <div class="tier"><span class="who"><b><span class="zh">小组训练（3 人及以上）</span><span class="en">Group (3+)</span></b><span><span class="zh">呼朋唤友一起玩</span><span class="en">Best value for groups</span></span></span><span class="amt">$280<small>/<span class="zh">人</span><span class="en">pp</span></small></span></div>
+        <div class="tier"><span class="who"><b><span class="zh">小组训练（3 人及以上）</span><span class="en">Group (3+)</span></b><span><span class="zh">呼朋唤友一起玩</span><span class="en">Best value for groups</span></span></span><span class="amt">$300<small>/<span class="zh">人</span><span class="en">pp</span></small></span></div>
       </div>
       <div class="pbox">
         <h3><span class="zh">进阶课程（可自带枪械）</span><span class="en">Advanced (BYO Firearm)</span></h3>
         <div class="tier"><span class="who"><b><span class="zh">手枪进阶课程</span><span class="en">Advanced Handgun</span></b></span><span class="amt">$1200<small>/ 3 <span class="zh">节</span><span class="en">sessions</span></small></span></div>
         <div class="tier"><span class="who"><b><span class="zh">步枪进阶课程</span><span class="en">Advanced Rifle</span></b></span><span class="amt">$1500<small>/ 3 <span class="zh">节</span><span class="en">sessions</span></small></span></div>
-        <div class="tier"><span class="who"><b><span class="zh">霰弹枪进阶课程</span><span class="en">Advanced Shotgun</span></b></span><span class="amt">$600<small>/ 2 <span class="zh">节</span><span class="en">sessions</span></small></span></div>
+        <div class="tier"><span class="who"><b><span class="zh">霰弹枪进阶课程</span><span class="en">Advanced Shotgun</span></b></span><span class="amt">$1000<small>/ 3 <span class="zh">节</span><span class="en">sessions</span></small></span></div>
       </div>
     </div>
 
     <div class="grid2" style="margin-top:24px">
       <div class="ie">
         <h3><span class="zh">费用包含</span><span class="en">Included</span></h3>
-        <ul>
+        <ul class="fee-row">
           <li><span class="zh">靶场使用费</span><span class="en">Range fees</span></li>
           <li><span class="zh">枪械安全课程费</span><span class="en">Firearm safety course</span></li>
           <li><span class="zh">5 英里内接送服务</span><span class="en">Pickup within 5 miles</span></li>
@@ -401,7 +404,7 @@
       </div>
       <div class="ie no">
         <h3><span class="zh">费用不包含</span><span class="en">Not Included</span></h3>
-        <ul>
+        <ul class="fee-row">
           <li><span class="zh">长途接送费</span><span class="en">Long-distance pickup</span></li>
           <li><span class="zh">额外弹药费</span><span class="en">Additional ammunition</span></li>
           <li><span class="zh">教官小费</span><span class="en">Instructor gratuity</span></li>
